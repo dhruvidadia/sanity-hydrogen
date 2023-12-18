@@ -24,7 +24,8 @@ const CLASSES = {
     start: 'justify-start',
   },
   imageAspect: {
-    landscape: 'aspect-square md:aspect-[16/9]',
+    // landscape: 'aspect-square md:aspect-[16/9]',
+    landscape: 'aspect-square',
     square: 'aspect-square',
   },
   width: {
@@ -102,7 +103,8 @@ export default function ModuleGrid({items}: Props) {
         const productLayoutClasses = clsx([
           CLASSES.flexAlign[productLayout.flex.align],
           CLASSES.flexJustify[productLayout.flex.justify],
-          productLayout.offsetY ? 'md:mt-[5vw]' : 'mt-0',
+          //productLayout.offsetY ? 'md:mt-[5vw]' : 'mt-0',
+          productLayout.offsetY ? 'md:mt-0' : 'mt-0',
         ]);
 
         if (isModule(item)) {

@@ -12,8 +12,8 @@ export default function HomeHero({hero}: Props) {
   return (
     <div
       className={clsx(
-        'flex flex-col items-center rounded-b-xl bg-peach px-4 pb-4 pt-24',
-        'md:px-8 md:pb-8 md:pt-34',
+        'flex flex-col items-center px-2 pb-2 pt-15',
+        'md:px-4 md:pb-4 md:pt-15',
       )}
     >
       {/* Title */}
