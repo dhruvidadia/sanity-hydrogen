@@ -72,7 +72,7 @@ export default {
         config: {
           projectId: env.SANITY_PROJECT_ID,
           dataset: env.SANITY_DATASET,
-          apiVersion: env.SANITY_API_VERSION ?? '2023-03-30',
+          apiVersion: '2023-03-30',
           useCdn: process.env.NODE_ENV === 'production',
           perspective: 'published',
         },

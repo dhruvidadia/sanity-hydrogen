@@ -94,7 +94,7 @@ type Props = {
 
 export default function ModuleGrid({items}: Props) {
   return (
-    <ul className="grid grid-cols-1 gap-x-[7.5vw] gap-y-[7.5vw] md:grid-cols-2">
+    <ul className="grid grid-cols-1 gap-4 md:grid-cols-4">
       {items.map((item, index) => {
         const productLayout = PRODUCT_LAYOUT[index % PRODUCT_LAYOUT.length];
         const productImageAspect = CLASSES.imageAspect[productLayout.aspect];
@@ -122,7 +122,7 @@ export default function ModuleGrid({items}: Props) {
               ])}
               key={item._key}
             >
-              <div className={clsx(isProductModule ? productWidth : 'w-full')}>
+              <div /*className={clsx(isProductModule ? productWidth : 'w-full')}*/ className='w-full'>
                 <Module
                   imageAspectClassName={productImageAspect}
                   module={item}
@@ -134,7 +134,7 @@ export default function ModuleGrid({items}: Props) {
           // Render product cards
           return (
             <li className={productLayoutClasses} key={item.id}>
-              <div className={productWidth}>
+              <div className='w-full'>
                 <ProductCard
                   imageAspectClassName={productImageAspect}
                   storefrontProduct={item}
